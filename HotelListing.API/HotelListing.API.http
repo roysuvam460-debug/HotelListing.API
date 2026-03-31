@@ -5,7 +5,44 @@ Accept: application/json
 
 ###
 
+GET {{HotelListing.API_HostAddress}}/api/countries
+
+###
+@id=2
+GET {{HotelListing.API_HostAddress}}/api/countries/{{id}}
+
+###
+
+POST {{HotelListing.API_HostAddress}}/api/countries
+Content-Type: application/json
+
+{
+  "name": "United States of America",
+  "shortName": "USA"
+}
+
+###
+
+PUT {{HotelListing.API_HostAddress}}/api/countries/{{id}}
+Content-Type: application/json
+
+{ 
+  "countryId" : 1,
+  "name": "Pakistan",
+  "shortName": "PAK"
+}
+
+###
+
+DELETE {{HotelListing.API_HostAddress}}/api/countries/{{id}}
+
+###
+
 GET {{HotelListing.API_HostAddress}}/api/hotels
+
+###
+@id=1
+GET {{HotelListing.API_HostAddress}}/api/hotels/{{id}}
 
 ###
 
@@ -13,20 +50,11 @@ POST {{HotelListing.API_HostAddress}}/api/hotels
 Content-Type: application/json
 
 {
-  "id": 3,
-  "name": "Royal Oak",
-  "address": "Church Road",
-  "rating": 4.2
+  "Name": "Pearl Harbour",
+  "Address": "Texas",
+  "Rating": 4.0,
+  "CountryId": 2
 }
-
-###
-
-@id=1
-DELETE {{HotelListing.API_HostAddress}}/api/hotels/{{id}}
-
-###
-
-GET {{HotelListing.API_HostAddress}}/api/hotels/{{id}}
 
 ###
 
@@ -34,10 +62,11 @@ PUT {{HotelListing.API_HostAddress}}/api/hotels/{{id}}
 Content-Type: application/json
 
 {
-  "id": 3,
-  "name": "New Royal Oak",
-  "address": "Church Road",
-  "rating": 4.2
+  //Hotel
 }
+
+###
+
+DELETE {{HotelListing.API_HostAddress}}/api/hotels/{{id}}
 
 ###
