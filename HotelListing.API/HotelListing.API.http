@@ -17,8 +17,8 @@ POST {{HotelListing.API_HostAddress}}/api/countries
 Content-Type: application/json
 
 {
-  "name": "United States of America",
-  "shortName": "USA"
+  "name": "India",
+  "shortName": "IN"
 }
 
 ###
@@ -41,7 +41,7 @@ DELETE {{HotelListing.API_HostAddress}}/api/countries/{{id}}
 GET {{HotelListing.API_HostAddress}}/api/hotels
 
 ###
-@id=1
+@id=1002
 GET {{HotelListing.API_HostAddress}}/api/hotels/{{id}}
 
 ###
@@ -50,10 +50,10 @@ POST {{HotelListing.API_HostAddress}}/api/hotels
 Content-Type: application/json
 
 {
-  "Name": "Pearl Harbour",
-  "Address": "Texas",
-  "Rating": 4.0,
-  "CountryId": 2
+  "Name": "La Pino",
+  "Address": "Paris",
+  "Rating": 3.1,
+  "CountryId": 1002
 }
 
 ###
@@ -62,7 +62,11 @@ PUT {{HotelListing.API_HostAddress}}/api/hotels/{{id}}
 Content-Type: application/json
 
 {
-  //Hotel
+  "Id": 1003,
+  "Name": "La Pinalest",
+  "Address": "Paris",
+  "Rating": 3.2,
+  "CountryId": 1002
 }
 
 ###
